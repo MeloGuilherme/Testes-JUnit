@@ -1,18 +1,21 @@
+/***********************************************************************
+ * Programa: Testes utilizando JUnit
+ * @authors: Guilherme Melo and Luiz Henrique
+ * Data: 10/10/2019
+ * Local: UNITINS
+************************************************************************/
+
 package testesComListas;
 
 import java.util.ArrayList;
 import java.util.List;
 
+// Classe que cria a lista e armazena nomes
 public class Listas {
 
 	private List<String> listaPessoas;
 	
-	public static void main(String[] args) {
-		
-		Listas l = new Listas();
-		System.out.println(l.existeNome("Cebola"));
-	}
-
+	// Cria e adiciona valores na lista
 	public void getListaPessoas() {
 
 		listaPessoas = new ArrayList<String>();
@@ -22,9 +25,11 @@ public class Listas {
 		listaPessoas.add("Larissa");
 		listaPessoas.add("Alex");
 	}
-
+	
+	// Verifica se o nome existe na lista
 	public boolean existeNome(String nome) {
 		
+		// Resposta
 		boolean aux = false;
 		getListaPessoas();
 
@@ -37,6 +42,7 @@ public class Listas {
 				aux = false;
 		}
 		
+		// Resposta
 		return aux;
 	}
 
